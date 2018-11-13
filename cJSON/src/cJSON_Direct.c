@@ -47,7 +47,7 @@ static void *_cjson2obj(key_info_t *kinfo, cJSON *json, void *obj)
 			*KEY_ADDR_DOUBLE(obj, kinfo[i].offset) = sub->valuedouble;
 			break;
 		case KEY_TYPE_STRING:
-			strcpy(KEY_ADDR_U8(obj, kinfo[i].offset), sub->string);
+			strcpy(KEY_ADDR_U8(obj, kinfo[i].offset), sub->valuestring);
 			break;
 		case KEY_TYPE_ARRAY:
 			cnt = cJSON_GetArraySize(sub);
